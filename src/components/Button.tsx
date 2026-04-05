@@ -25,7 +25,7 @@ const Button = ({ text, link, color = 'blue', width = '' }: ButtonProps) => {
     };
 
     const shadowClasses = `absolute inset-0 rounded-xl transition-transform duration-200 group-hover:translate-x-1 group-hover:translate-y-1 z-0 ${shadowColor}`;
-    const frontClasses = `relative flex items-center justify-center w-full h-full z-10 border-2 px-5 py-2 md:px-8 md:py-3 rounded-xl font-bold text-md md:text-lg transition-transform duration-200 group-hover:-translate-y-1 group-hover:-translate-x-1 uppercase tracking-normal text-center ${frontColor}`;
+    const frontClasses = `relative flex items-center justify-center w-full h-full z-10 border-2 px-5 py-1 md:px-8 md:py-3 rounded-xl font-bold text-sm md:text-lg transition-transform duration-200 group-hover:-translate-y-1 group-hover:-translate-x-1 uppercase tracking-normal text-center ${frontColor}`;
 
     if (link) {
         return (
