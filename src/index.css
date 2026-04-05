@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Bayon', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .text-protrude {
+    font-size: clamp(3.5rem, 11vw, 6rem);
+    font-weight: 900;
+    text-shadow:
+      1px 1px 0 #3E4875,
+      2px 2px 0 #3E4875,
+      3px 3px 0 #3E4875,
+      4px 4px 0 #3E4875,
+      5px 5px 0 #3E4875,
+      6px 6px 0 #3E4875,
+      7px 7px 0 #3E4875,
+      8px 8px 0 #3E4875;
+    -webkit-text-stroke: 3px #3E4875;
+    paint-order: stroke fill;
+    letter-spacing: 0.02em;
+  }
+
+  .text-subtitle {
+    font-family: 'Bowlby One', sans-serif;
+    font-size: clamp(0.7rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+}
