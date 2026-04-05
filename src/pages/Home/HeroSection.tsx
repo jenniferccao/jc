@@ -16,7 +16,7 @@ const HeroSection = () => {
         <Button text="MAIN SITE" color="blue" width="w-[100px] md:w-[150px]" />
       </div>
 
-      <img src="/logo_detailed.png" alt="logo" className="mt-10 md:mt-24 w-[50vw] md:w-[400px] max-w-[400px]" />
+      <img src="/logo_detailed.png" alt="logo" className="mt-14 md:mt-24 w-[50vw] md:w-[400px] max-w-[400px]" />
       <About />
       <div className="relative w-full mt-auto flex justify-center">
         <img src="/bottomgraphics.png" alt="bottom graphics" className="w-full block" />
