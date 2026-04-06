@@ -15,13 +15,14 @@ export default {
       },
       keyframes: {
         blobPulse: {
-          '0%': { transform: 'scale(0.7)', opacity: '0' },
-          '50%': { transform: 'scale(1.0)', opacity: '0.8' },
-          '100%': { transform: 'scale(1.3)', opacity: '0' },
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+          '80%': { transform: 'scale(1.14)', opacity: '0.8' },
+          '100%': { transform: 'scale(1.2)', opacity: '0' },
         }
       },
       animation: {
-        'blob-pulse': 'blobPulse 15s linear infinite',
+        'blob-pulse': 'blobPulse 10s linear infinite',
       }
     },
   },
