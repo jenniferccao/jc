@@ -30,7 +30,7 @@ const Projects = () => {
                 <Project
                     name="CHIRP IT!"
                     description="A Google Chrome extension for accessible learning by letting users interact with webpages through voice."
-                    stack="React, Typescript, Tesseract OCR"
+                    stack="Javascript, Chrome Extension API, ElevenLabs"
                     link="https://github.com/jenniferccao/Chirp"
                     image="/chirp.png"
                 />
