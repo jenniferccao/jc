@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 
 const Projects = () => {
     return (
-        <div className="flex flex-col items-center pb-10 w-full bg-[url('/bgimgproj.png')] bg-cover bg-top bg-no-repeat">
+        <div id="projects" className="flex flex-col items-center pb-10 w-full bg-[url('/bgimgproj.png')] bg-cover bg-top bg-no-repeat">
             <div className="flex items-center justify-center bg-green w-full h-[3vh] md:h-[5vh]">
                 <p className="text-background font-sans text-xs md:text-sm font-bold tracking-wide">BACKGROUND IMAGES BELOW TAKEN BY ME :)</p>
             </div>
