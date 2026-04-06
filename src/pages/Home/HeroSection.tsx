@@ -19,8 +19,8 @@ const HeroSection = () => {
       <h3 className="relative z-10 text-subtitle text-center mt-3 md:mt-5 px-4">SOFTWARE + DESIGN PROJECTS</h3>
 
       <div className="flex gap-3 md:gap-4 mt-5 md:mt-20">
-        <Button text="HIRE ME" color="yellow" width="w-[100px] md:w-[150px]" />
-        <Button text="MAIN SITE" color="blue" width="w-[100px] md:w-[150px]" />
+        <Button text="HIRE ME" color="yellow" width="w-[100px] md:w-[150px]" link="mailto:jennifer.cao.ca@gmail.com" />
+        <Button text="MY WORK" color="blue" width="w-[100px] md:w-[150px]" />
       </div>
 
       <img src="/logo_detailed.png" alt="logo" className="relative z-10 mt-14 md:mt-24 w-[50vw] md:w-[400px] max-w-[400px]" />

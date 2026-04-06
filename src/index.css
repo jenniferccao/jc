@@ -35,4 +35,8 @@
     font-weight: 500;
     letter-spacing: 0.08em;
   }
+
+  .font-goof {
+    font-family: 'Bowlby One', sans-serif;
+  }
 }
