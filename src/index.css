@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     margin: 0;
@@ -12,6 +16,23 @@
 }
 
 @layer components {
+  .mobile-menu-dropdown {
+    animation: menuDropIn 220ms ease-out both;
+    will-change: transform, opacity;
+  }
+
+  @keyframes menuDropIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+
   .text-protrude {
     font-size: clamp(3.5rem, 11vw, 6rem);
     font-weight: 900;

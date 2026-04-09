@@ -12,7 +12,7 @@ const Design = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center bg-foreground w-full pb-20">
+        <div id="design" className="scroll-mt-28 md:scroll-mt-32 flex flex-col items-center bg-foreground w-full pb-20">
             <div className="flex items-center justify-center pt-10 pb-10 md:pt-20 md:pb-16">
                 <h1 className="text-yellow font-goof text-3xl md:text-5xl tracking-wide">DESIGN - WORK IN PROGRESS</h1>
             </div>

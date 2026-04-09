@@ -4,7 +4,7 @@ import Design from './Design';
 
 const Home = () => {
   return (
-    <main>
+    <main id="top">
       <HeroSection />
       <Projects />
       <Design />
