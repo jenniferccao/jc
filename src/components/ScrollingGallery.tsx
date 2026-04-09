@@ -1,10 +1,12 @@
 import { useRef, useState, useEffect } from "react";
+import type { ReactNode } from "react";
 
 interface ScrollingGalleryProps {
     images: string[];
+    endItem?: ReactNode;
 }
 
-const ScrollingGallery = ({ images }: ScrollingGalleryProps) => {
+const ScrollingGallery = ({ images, endItem }: ScrollingGalleryProps) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -14,8 +16,6 @@ const ScrollingGallery = ({ images }: ScrollingGalleryProps) => {
             const firstChild = container.children[0] as HTMLElement;
             const lastChild = container.children[container.children.length - 1] as HTMLElement;
 
-            // Define the true functional scroll range (from the centered first item to the centered last item)
-            // This ignores the massive 50vw empty padding voids at both ends of the container
             const startScroll = firstChild.clientWidth / 2;
             const endScroll = (container.scrollWidth - container.clientWidth) - (lastChild.clientWidth / 2);
 
@@ -25,15 +25,12 @@ const ScrollingGallery = ({ images }: ScrollingGalleryProps) => {
                 progress = (container.scrollLeft - startScroll) / effectiveRange;
             }
 
-            // Clamp mathematically between 0.0 and 1.0 (prevents dots undoing if dragging deep into the padding edge)
             setScrollProgress(Math.max(0, Math.min(1, progress)));
         }
     };
 
     useEffect(() => {
         if (scrollRef.current && scrollRef.current.children.length > 0) {
-            // Because of the 50vw left padding, the first child's left edge natively sits exactly at the center. 
-            // We just scroll the viewport right by exactly half of the child's computed width to perfectly center it.
             const container = scrollRef.current;
             const firstChild = container.children[0] as HTMLElement;
             container.scrollTo({ left: firstChild.clientWidth / 2, behavior: 'instant' });
@@ -46,40 +43,38 @@ const ScrollingGallery = ({ images }: ScrollingGalleryProps) => {
 
     return (
         <div className="w-full flex flex-col items-center">
-            {/* Horizontal Scrolling Gallery structured like 3D Cards */}
             <div
                 ref={scrollRef}
                 onScroll={handleScroll}
                 className="w-full flex items-center overflow-x-auto snap-x snap-mandatory gap-8 px-[50vw] pb-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
             >
                 {images.map((src, index) => (
-                    <div key={index} className="flex-shrink-0 snap-center relative">
-
-                        {/* 3D Static Shadow Layer */}
-                        <div className="absolute inset-0 rounded-2xl bg-background translate-y-2 translate-x-2 z-0"></div>
-
-                        {/* Main Display Layer */}
-                        <div className="relative z-10 bg-background border-[3px] border-background rounded-2xl overflow-hidden flex items-center justify-center">
+                    <div key={index} className="flex-shrink-0 snap-center relative w-[78vw] md:w-[58vw] lg:w-[46vw] aspect-[4/3]">
+                        <div className="absolute inset-0 rounded-2xl bg-foreground translate-y-2 translate-x-2 z-0"></div>
+                        <div className="relative z-10 h-full w-full bg-foreground border-[3px] border-foreground rounded-2xl overflow-hidden">
                             <img
                                 src={src}
                                 alt={`Gallery Item ${index + 1}`}
-                                // Mathematically limits the image to bounds that fit fully on screen, preserving true aspect ratio
-                                className="w-auto h-auto min-h-[200px] max-h-[50vh] md:max-h-[60vh] max-w-[80vw] md:max-w-[70vw] object-contain"
+                                className="h-full w-full object-cover"
                             />
                         </div>
-
                     </div>
                 ))}
+
+                {endItem && (
+                    <div className="flex-shrink-0 snap-center min-w-[220px] md:min-w-[260px] flex items-center justify-center">
+                        {endItem}
+                    </div>
+                )}
             </div>
 
-            {/* Boxed Scroll Indicator Dots */}
             <div className="w-full mt-6 flex items-center justify-center gap-1 md:gap-2 pointer-events-none">
                 {images.map((_, i) => {
                     const threshold = i / (images.length - 1);
                     return (
                         <div
                             key={i}
-                            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors duration-300 ${scrollProgress >= threshold - 0.05 ? 'bg-yellow' : 'bg-background'
+                            className={`w-3 h-3 md:w-3 md:h-3 rounded-full border-2 border-foreground transition-colors duration-300 ${scrollProgress >= threshold - 0.05 ? 'bg-foreground' : 'bg-background'
                                 }`}
                         ></div>
                     );

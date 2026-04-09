@@ -36,7 +36,7 @@ const Projects = () => {
                 />
 
                 <div className="w-full flex justify-end">
-                    <Button text="SEE MORE" link="https://github.com/jenniferccao" color="pink" width="w-[150px]" />
+                    <Button text="SEE MORE" link="https://github.com/jenniferccao" color="pink" width="w-[150px]" target="_blank" />
                 </div>
             </div>
 
