@@ -47,7 +47,7 @@ const Footer = () => {
 
                 <div className="pt-5 md:pt-10 md:pb-5 text-center">
                     <p className="text-[10px] md:text-xs font-bold text-yellow font-sans tracking-wider">
-                        DESIGNED & DEVELOPED BY JENNIFER CAO 2026
+                        CREATED BY JC, INSPIRED BY SF OUTSIDE LANDS
                     </p>
                 </div>
 
