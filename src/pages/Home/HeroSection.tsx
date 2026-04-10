@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 const HeroSection = () => {
   return (
     <div
-      className="relative overflow-x-hidden w-full min-h-screen md:min-h-0 md:aspect-[1512/2000] bg-green flex items-center flex-col pt-[10vh] md:pt-[20vh] bg-[url('/bgimg.png')] bg-cover bg-[center_top] md:bg-[center_-800px]"
+      className="relative overflow-x-hidden w-full min-h-screen md:min-h-0 md:aspect-[1512/2000] bg-green flex items-center flex-col pt-[12vh] md:pt-[20vh] bg-[url('/bgimg.png')] bg-cover bg-[center_top] md:bg-[center_-800px]"
     >
       <div className="absolute top-[60%] md:top-[55%] left-0 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[1000px] z-0 pointer-events-none">
         <img src="/blob1.png" alt="blob1" className="w-full h-full object-contain animate-blob-pulse" />

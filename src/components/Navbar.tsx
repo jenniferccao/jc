@@ -11,19 +11,19 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex justify-center items-center relative p-0">
 
         <div className="hidden md:flex items-center space-x-5 absolute left-0">
-          <a href="https://www.linkedin.com/in/jenniferrcao/" target="_blank" rel="noopener noreferrer" className="text-foreground transition-colors hover:text-green">
+          <a href="https://www.linkedin.com/in/jenniferrcao/" target="_blank" rel="noopener noreferrer" className="text-foreground transition-colors hover:text-pink">
             <svg className="w-[30px] h-[30px]" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M44.4469 0H3.54375C1.58437 0 0 1.54688 0 3.45938V44.5312C0 46.4437 1.58437 48 3.54375 48H44.4469C46.4062 48 48 46.4438 48 44.5406V3.45938C48 1.54688 46.4062 0 44.4469 0ZM14.2406 40.9031H7.11563V17.9906H14.2406V40.9031ZM10.6781 14.8688C8.39062 14.8688 6.54375 13.0219 6.54375 10.7437C6.54375 8.46562 8.39062 6.61875 10.6781 6.61875C12.9563 6.61875 14.8031 8.46562 14.8031 10.7437C14.8031 13.0125 12.9563 14.8688 10.6781 14.8688ZM40.9031 40.9031H33.7875V29.7656C33.7875 27.1125 33.7406 23.6906 30.0844 23.6906C26.3812 23.6906 25.8187 26.5875 25.8187 29.5781V40.9031H18.7125V17.9906H25.5375V21.1219H25.6312C26.5781 19.3219 28.9031 17.4188 32.3625 17.4188C39.5719 17.4188 40.9031 22.1625 40.9031 28.3313V40.9031Z" />
             </svg>
           </a>
-          <a href="https://github.com/jenniferccao" target="_blank" rel="noopener noreferrer" className="text-foreground transition-colors hover:text-green">
+          <a href="https://github.com/jenniferccao" target="_blank" rel="noopener noreferrer" className="text-foreground transition-colors hover:text-pink">
             <svg className="w-[30px] h-[30px]" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path fillRule="evenodd" clipRule="evenodd" d="M24.0199 0C10.7375 0 0 10.8167 0 24.1983C0 34.895 6.87988 43.9495 16.4241 47.1542C17.6174 47.3951 18.0545 46.6335 18.0545 45.9929C18.0545 45.4319 18.0151 43.509 18.0151 41.5055C11.3334 42.948 9.94198 38.6209 9.94198 38.6209C8.86818 35.8164 7.27715 35.0956 7.27715 35.0956C5.09022 33.6132 7.43645 33.6132 7.43645 33.6132C9.86233 33.7735 11.1353 36.0971 11.1353 36.0971C13.2824 39.7827 16.7422 38.7413 18.1341 38.1002C18.3328 36.5377 18.9695 35.456 19.6455 34.8552C14.3163 34.2942 8.70937 32.211 8.70937 22.9161C8.70937 20.2719 9.66321 18.1086 11.1746 16.4261C10.9361 15.8253 10.1008 13.3409 11.4135 10.0157C11.4135 10.0157 13.4417 9.3746 18.0146 12.4996C19.9725 11.9699 21.9916 11.7005 24.0199 11.6982C26.048 11.6982 28.1154 11.979 30.0246 12.4996C34.5981 9.3746 36.6262 10.0157 36.6262 10.0157C37.9389 13.3409 37.1031 15.8253 36.8646 16.4261C38.4158 18.1086 39.3303 20.2719 39.3303 22.9161C39.3303 32.211 33.7234 34.2539 28.3544 34.8552C29.2296 35.6163 29.9848 37.0583 29.9848 39.3421C29.9848 42.5871 29.9454 45.1915 29.9454 45.9924C29.9454 46.6335 30.383 47.3951 31.5758 47.1547C41.12 43.9491 47.9999 34.895 47.9999 24.1983C48.0392 10.8167 37.2624 0 24.0199 0Z" />
             </svg>
           </a>
         </div>
 
-        <a href="#top" className="text-foreground transition-colors hover:text-green">
+        <a href="#top" className="text-foreground transition-colors hover:text-pink">
           <svg className="w-[120px] h-auto" viewBox="0 0 143 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-label="logo">
             <path d="M6.34277 17.6C4.92011 17.6 3.82744 17.226 3.06477 16.478C2.31677 15.7153 1.94277 14.6227 1.94277 13.2V10.12C1.94277 9.40133 2.12611 8.85867 2.49277 8.492C2.87411 8.11067 3.42411 7.92 4.14277 7.92H8.98277C9.70144 7.92 10.2441 8.11067 10.6108 8.492C10.9921 8.85867 11.1828 9.40133 11.1828 10.12V14.52C11.1828 15.1067 11.4761 15.4 12.0628 15.4H12.5028C13.0894 15.4 13.3828 15.1067 13.3828 14.52V2.2C13.3828 1.48133 13.5661 0.938666 13.9328 0.571999C14.3141 0.190666 14.8641 0 15.5828 0H20.4228C21.1414 0 21.6841 0.190666 22.0508 0.571999C22.4321 0.938666 22.6228 1.48133 22.6228 2.2V13.2C22.6228 14.6227 22.2488 15.7153 21.5008 16.478C20.7528 17.226 19.6601 17.6 18.2228 17.6H6.34277Z" />
             <path d="M27.0236 17.6C26.305 17.6 25.755 17.4167 25.3736 17.05C25.007 16.6687 24.8236 16.1187 24.8236 15.4V2.2C24.8236 1.48133 25.007 0.938666 25.3736 0.571999C25.755 0.190666 26.305 0 27.0236 0H42.0936C42.6803 0 42.9736 0.293333 42.9736 0.879999V1.32C42.9736 1.90667 42.6803 2.2 42.0936 2.2H34.0636V4.4H40.1136C40.7003 4.4 40.9936 4.69333 40.9936 5.28V5.72C40.9936 6.30667 40.7003 6.6 40.1136 6.6H34.0636V9.02H41.6536C42.3723 9.02 42.915 9.21067 43.2816 9.592C43.663 9.95867 43.8536 10.5013 43.8536 11.22V15.4C43.8536 16.1187 43.663 16.6687 43.2816 17.05C42.915 17.4167 42.3723 17.6 41.6536 17.6H27.0236Z" />
@@ -62,9 +62,9 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center space-x-8 absolute right-0 text-lg">
-          <a href="#lineup" className="text-foreground hover:text-green transition-colors">About</a>
-          <a href="#projects" className="text-foreground hover:text-green transition-colors">Projects</a>
-          <a href="#design" className="text-foreground hover:text-green transition-colors">Design</a>
+          <a href="#lineup" className="text-foreground hover:text-pink transition-colors">About</a>
+          <a href="#projects" className="text-foreground hover:text-pink transition-colors">Projects</a>
+          <a href="#design" className="text-foreground hover:text-pink transition-colors">Design</a>
         </div>
 
         <button

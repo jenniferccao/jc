@@ -4,11 +4,11 @@ const Footer = () => {
             <div className="flex items-center justify-between flex-col">
                 <div className="flex items-center justify-between w-[90vw] py-10">
                     <div className="flex flex-col items-start gap-2">
-                        <a className="text-m md:text-l hover:text-yellow" href="https://jenniferccao.github.io/jen/" target="_blank"> Old site - 2025</a>
-                        <a className="text-m md:text-l hover:text-yellow" href="https://jenniferccao.github.io/jencao/" target="blank"> Old site - 2024</a>
+                        <a className="text-m md:text-l hover:text-green" href="https://jenniferccao.github.io/jen/" target="_blank"> Old site - 2025</a>
+                        <a className="text-m md:text-l hover:text-green" href="https://jenniferccao.github.io/jencao/" target="blank"> Old site - 2024</a>
                     </div>
 
-                    <svg className="w-[150px] md:w-[180px] h-auto" viewBox="0 0 143 34" fill="#FFD151" xmlns="http://www.w3.org/2000/svg" aria-label="logo">
+                    <svg className="w-[150px] md:w-[180px] h-auto" viewBox="0 0 143 34" fill="#42C790" xmlns="http://www.w3.org/2000/svg" aria-label="logo">
                         <path d="M6.34277 17.6C4.92011 17.6 3.82744 17.226 3.06477 16.478C2.31677 15.7153 1.94277 14.6227 1.94277 13.2V10.12C1.94277 9.40133 2.12611 8.85867 2.49277 8.492C2.87411 8.11067 3.42411 7.92 4.14277 7.92H8.98277C9.70144 7.92 10.2441 8.11067 10.6108 8.492C10.9921 8.85867 11.1828 9.40133 11.1828 10.12V14.52C11.1828 15.1067 11.4761 15.4 12.0628 15.4H12.5028C13.0894 15.4 13.3828 15.1067 13.3828 14.52V2.2C13.3828 1.48133 13.5661 0.938666 13.9328 0.571999C14.3141 0.190666 14.8641 0 15.5828 0H20.4228C21.1414 0 21.6841 0.190666 22.0508 0.571999C22.4321 0.938666 22.6228 1.48133 22.6228 2.2V13.2C22.6228 14.6227 22.2488 15.7153 21.5008 16.478C20.7528 17.226 19.6601 17.6 18.2228 17.6H6.34277Z" />
                         <path d="M27.0236 17.6C26.305 17.6 25.755 17.4167 25.3736 17.05C25.007 16.6687 24.8236 16.1187 24.8236 15.4V2.2C24.8236 1.48133 25.007 0.938666 25.3736 0.571999C25.755 0.190666 26.305 0 27.0236 0H42.0936C42.6803 0 42.9736 0.293333 42.9736 0.879999V1.32C42.9736 1.90667 42.6803 2.2 42.0936 2.2H34.0636V4.4H40.1136C40.7003 4.4 40.9936 4.69333 40.9936 5.28V5.72C40.9936 6.30667 40.7003 6.6 40.1136 6.6H34.0636V9.02H41.6536C42.3723 9.02 42.915 9.21067 43.2816 9.592C43.663 9.95867 43.8536 10.5013 43.8536 11.22V15.4C43.8536 16.1187 43.663 16.6687 43.2816 17.05C42.915 17.4167 42.3723 17.6 41.6536 17.6H27.0236Z" />
                         <path d="M48.2502 17.6C47.5315 17.6 46.9815 17.4167 46.6002 17.05C46.2335 16.6687 46.0502 16.1187 46.0502 15.4V4.4C46.0502 2.96267 46.4242 1.87 47.1722 1.122C47.9349 0.374 49.0275 0 50.4502 0H62.3302C63.7675 0 64.8602 0.374 65.6082 1.122C66.3562 1.87 66.7302 2.96267 66.7302 4.4V15.4C66.7302 16.1187 66.5395 16.6687 66.1582 17.05C65.7915 17.4167 65.2489 17.6 64.5302 17.6H59.6902C58.9715 17.6 58.4215 17.4167 58.0402 17.05C57.6735 16.6687 57.4902 16.1187 57.4902 15.4V3.08C57.4902 2.49333 57.1969 2.2 56.6102 2.2H56.1702C55.5835 2.2 55.2902 2.49333 55.2902 3.08V15.4C55.2902 16.1187 55.0995 16.6687 54.7182 17.05C54.3515 17.4167 53.8089 17.6 53.0902 17.6H48.2502Z" />
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-5 md:pt-10 md:pb-5 text-center">
-                    <p className="text-[10px] md:text-xs font-bold text-yellow font-sans tracking-wider">
+                    <p className="text-[10px] md:text-xs font-bold text-green font-sans tracking-wider">
                         CREATED BY JC, INSPIRED BY SF OUTSIDE LANDS
                     </p>
                 </div>

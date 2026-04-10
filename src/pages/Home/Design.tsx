@@ -13,7 +13,7 @@ const Design = () => {
     ];
 
     return (
-        <div id="design" className="scroll-mt-28 md:scroll-mt-32 flex flex-col items-center w-full pb-20 bg-[url('/bgimgdesign.png')] bg-cover bg-bottom bg-no-repeat">
+        <div id="design" className="scroll-mt-28 md:scroll-mt-32 flex flex-col items-center w-full pb-10 bg-[url('/bgimgdesign.png')] bg-cover bg-bottom bg-no-repeat">
             <div className="flex items-center justify-center pt-10 pb-10 md:pt-20 md:pb-16">
                 <h1 className="text-foreground font-goof text-3xl md:text-5xl tracking-wide">DESIGN</h1>
             </div>
@@ -23,7 +23,7 @@ const Design = () => {
                 endItem={<Button text="SEE MORE" link="https://dribbble.com/jencao" target="_blank" color="pink" width="w-[160px]" />}
             />
 
-            <div className="w-[80vw] flex items-center justify-center mt-10">
+            <div className="w-[80vw] flex items-center justify-center mt-10 md:mt-20">
                 <h1 className="text-protrude text-background text-3xl md:text-5xl tracking-wide">THANKS FOR THE VISIT :)</h1>
             </div>
         </div>
