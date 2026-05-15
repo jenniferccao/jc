@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+
 interface ProjectProps {
     name?: string;
     description?: string;
@@ -13,12 +15,20 @@ const Project = ({
     image,
     link
 }: ProjectProps) => {
+    const imageRef = useRef<HTMLImageElement | null>(null);
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        if (imageRef.current?.complete) {
+            setImageLoaded(true);
+        }
+    }, []);
 
     // Default image to the preview.png of the provided link, otherwise keep empty
     const displayImage = image || (link ? `${link.replace(/\/$/, '')}/preview.png` : undefined);
 
     const content = (
-        <div className="relative w-[90vw] md:w-[70vw] max-w-[1000px]">
+        <div className="relative w-[90vw] md:w-[70vw] max-w-[1000px] home-reveal">
             {/* 3D Static Shadow Layer */}
             <div className="absolute inset-0 rounded-2xl bg-foreground translate-y-1.5 md:translate-y-2 translate-x-1.5 md:translate-x-2 z-0"></div>
 
@@ -43,7 +53,16 @@ const Project = ({
                 <div className="w-full md:w-[55%] flex-grow relative">
                     <div className="w-full h-[250px] md:h-full bg-foreground flex items-center justify-center overflow-hidden">
                         {displayImage ? (
-                            <img src={displayImage} alt={name} className="w-full h-full object-cover" />
+                            <img
+                                ref={imageRef}
+                                src={displayImage}
+                                alt={name}
+                                loading="eager"
+                                onLoad={() => setImageLoaded(true)}
+                                className={`w-full h-full object-cover transition-opacity duration-[1400ms] ease-out ${
+                                    imageLoaded ? 'opacity-100' : 'opacity-0'
+                                }`}
+                            />
                         ) : (
                             <span className="text-background/50 font-sans text-sm">Image Placeholder</span>
                         )}

@@ -1,31 +1,54 @@
-import About from "./About";
-import Button from "../../components/Button";
+import { useEffect, useRef, useState } from 'react';
+
+import About from './About';
+import Button from '../../components/Button';
 
 const HeroSection = () => {
+  const bgImageRef = useRef<HTMLImageElement | null>(null);
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    if (bgImageRef.current?.complete) {
+      setBgLoaded(true);
+    }
+  }, []);
+
   return (
     <div
-      className="relative overflow-x-hidden w-full min-h-screen md:min-h-0 md:aspect-[1512/2000] bg-green flex items-center flex-col pt-[12vh] md:pt-[20vh] bg-[url('/bgimg.png')] bg-cover bg-[center_top] md:bg-[center_-800px]"
+      className="relative overflow-x-hidden w-full min-h-screen md:min-h-0 md:aspect-[1512/2000] bg-green flex items-center flex-col pt-[12vh] md:pt-[20vh]"
     >
-      <div className="absolute top-[60%] md:top-[55%] left-0 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[1000px] z-0 pointer-events-none">
+      <img
+        ref={bgImageRef}
+        src="/bgimg.png"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        onLoad={() => setBgLoaded(true)}
+        className={`absolute inset-0 z-0 h-full w-full object-cover object-[center_top] md:object-[center_-800px] transition-opacity duration-[1800ms] ease-out ${
+          bgLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+
+      <div className="absolute top-[60%] md:top-[55%] left-0 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[1000px] z-0 pointer-events-none home-reveal home-delay-2">
         <img src="/blob1.png" alt="blob1" className="w-full h-full object-contain animate-blob-pulse" />
       </div>
-      <div className="absolute top-[67%] md:top-[60%] right-0 translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[1000px] z-0 pointer-events-none">
+      <div className="absolute top-[67%] md:top-[60%] right-0 translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[1000px] z-0 pointer-events-none home-reveal home-delay-3">
         <img src="/blob2.png" alt="blob2" className="w-full h-full object-contain animate-blob-pulse" />
       </div>
 
-      <h1 className="relative z-10 text-protrude text-background text-center leading-none">
+      <h1 className="relative z-10 text-protrude text-background text-center leading-none home-reveal">
         JEN'S<br className="md:hidden" /> PORTFOLIO
       </h1>
-      <h3 className="relative z-10 text-subtitle text-center mt-3 md:mt-5 px-4">SOFTWARE + DESIGN PROJECTS</h3>
+      <h3 className="relative z-10 text-subtitle text-center mt-3 md:mt-5 px-4 home-reveal home-delay-1">SOFTWARE + DESIGN PROJECTS</h3>
 
-      <div className="flex gap-3 md:gap-4 mt-5 md:mt-20">
+      <div className="flex gap-3 md:gap-4 mt-5 md:mt-20 home-reveal home-delay-2">
         <Button text="HIRE ME" color="yellow" width="w-[100px] md:w-[150px]" link="mailto:jennifer.cao.ca@gmail.com" />
         <Button text="MY WORK" color="blue" width="w-[100px] md:w-[150px]" link="#projects" />
       </div>
 
-      <img src="/logo_detailed.png" alt="logo" className="relative z-10 mt-14 md:mt-24 w-[50vw] md:w-[400px] max-w-[400px]" />
+      <img src="/logo_detailed.png" alt="logo" className="relative z-10 mt-14 md:mt-24 w-[50vw] md:w-[400px] max-w-[400px] home-reveal home-delay-3" />
       <About />
-      <div className="relative w-full mt-auto flex justify-center">
+      <div className="relative w-full mt-auto flex justify-center home-reveal home-delay-5">
         <img src="/bottomgraphics.png" alt="bottom graphics" className="w-full block" />
         <img src="/planeprop.png" alt="plane propeller" className="absolute bottom-[11%] right-[19%] w-[1.6%] origin-center animate-[spin_2s_linear_infinite]" />
       </div>

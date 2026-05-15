@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-foreground text-background;
     margin: 0;
     min-height: 100vh;
     font-family: 'Bayon', system-ui, sans-serif;
@@ -16,6 +16,40 @@
 }
 
 @layer components {
+  .home-reveal {
+    opacity: 0;
+    animation: homeFadeIn 1200ms ease-out forwards;
+    will-change: transform, opacity;
+  }
+
+  .home-reveal-slow {
+    animation-duration: 900ms;
+  }
+
+  .home-delay-1 {
+    animation-delay: 120ms;
+  }
+
+  .home-delay-2 {
+    animation-delay: 240ms;
+  }
+
+  .home-delay-3 {
+    animation-delay: 360ms;
+  }
+
+  .home-delay-4 {
+    animation-delay: 480ms;
+  }
+
+  .home-delay-5 {
+    animation-delay: 600ms;
+  }
+
+  .home-delay-6 {
+    animation-delay: 720ms;
+  }
+
   .mobile-menu-dropdown {
     animation: menuDropIn 220ms ease-out both;
     will-change: transform, opacity;
@@ -30,6 +64,32 @@
     to {
       opacity: 1;
       transform: translate(-50%, 0);
+    }
+  }
+
+  @keyframes homeFadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-reveal,
+    .home-reveal-slow,
+    .home-delay-1,
+    .home-delay-2,
+    .home-delay-3,
+    .home-delay-4,
+    .home-delay-5,
+    .home-delay-6,
+    .mobile-menu-dropdown,
+    .text-protrude {
+      animation: none !important;
+      opacity: 1 !important;
     }
   }
 

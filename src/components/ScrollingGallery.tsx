@@ -9,6 +9,7 @@ interface ScrollingGalleryProps {
 const ScrollingGallery = ({ images, endItem }: ScrollingGalleryProps) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
 
     const handleScroll = () => {
         if (scrollRef.current && scrollRef.current.children.length > 0) {
@@ -49,20 +50,24 @@ const ScrollingGallery = ({ images, endItem }: ScrollingGalleryProps) => {
                 className="w-full flex items-center overflow-x-auto snap-x snap-mandatory gap-8 px-[50vw] pb-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
             >
                 {images.map((src, index) => (
-                    <div key={index} className="flex-shrink-0 snap-center relative w-[78vw] md:w-[58vw] lg:w-[46vw] aspect-[4/3]">
+                    <div key={index} className="flex-shrink-0 snap-center relative w-[78vw] md:w-[58vw] lg:w-[46vw] aspect-[4/3] home-reveal">
                         <div className="absolute inset-0 rounded-2xl bg-foreground translate-y-2 translate-x-2 z-0"></div>
                         <div className="relative z-10 h-full w-full bg-foreground border-[3px] border-foreground rounded-2xl overflow-hidden">
                             <img
                                 src={src}
                                 alt={`Gallery Item ${index + 1}`}
-                                className="h-full w-full object-cover"
+                                loading="eager"
+                                onLoad={() => setLoadedImages((current) => ({ ...current, [index]: true }))}
+                                className={`h-full w-full object-cover transition-opacity duration-[1400ms] ease-out ${
+                                    loadedImages[index] ? 'opacity-100' : 'opacity-0'
+                                }`}
                             />
                         </div>
                     </div>
                 ))}
 
                 {endItem && (
-                    <div className="flex-shrink-0 snap-center min-w-[220px] md:min-w-[260px] flex items-center justify-center">
+                    <div className="flex-shrink-0 snap-center min-w-[220px] md:min-w-[260px] flex items-center justify-center home-reveal home-delay-2">
                         {endItem}
                     </div>
                 )}
